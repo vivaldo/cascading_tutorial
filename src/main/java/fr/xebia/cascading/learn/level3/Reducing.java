@@ -46,6 +46,7 @@ public class Reducing {
   public static FlowDef efficientlyAggregate(Tap<?, ?, ?> source, Tap<?, ?, ?> sink) {
     Pipe sourcePipe = new Pipe("SourcePipe");
     Fields word = new Fields("word");
+    // todo
     return FlowDef.flowDef().addSource(sourcePipe, source).addTailSink(word, sink);
   }
 }
